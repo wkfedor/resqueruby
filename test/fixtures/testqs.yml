@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  countq: 1
+  nowq: 1
+  commentq: MyString
+
+two:
+  countq: 1
+  nowq: 1
+  commentq: MyString

@@ -1,0 +1,32 @@
+<%= form_with(model: testq) do |form| %>
+  <% if testq.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(testq.errors.count, "error") %> prohibited this testq from being saved:</h2>
+
+      <ul>
+        <% testq.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :countq, style: "display: block" %>
+    <%= form.number_field :countq %>
+  </div>
+
+  <div>
+    <%= form.label :nowq, style: "display: block" %>
+    <%= form.number_field :nowq %>
+  </div>
+
+  <div>
+    <%= form.label :commentq, style: "display: block" %>
+    <%= form.text_field :commentq %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
