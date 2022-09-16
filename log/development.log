@@ -417,3 +417,485 @@ Processing by TestqsController#show as TURBO_STREAM
 Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 3524)
 
 
+Started GET "/testqs" for 127.0.0.1 at 2022-09-16 11:00:30 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestqsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/index.html.erb within layouts/application
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs"[0m
+  ↳ app/views/testqs/index.html.erb:6
+  Rendered testqs/_testq.html.erb (Duration: 5.3ms | Allocations: 225)
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered testqs/index.html.erb within layouts/application (Duration: 27.2ms | Allocations: 21466)
+  Rendered layout layouts/application.html.erb (Duration: 217.1ms | Allocations: 110872)
+Completed 200 OK in 228ms (Views: 220.3ms | ActiveRecord: 0.6ms | Allocations: 117291)
+
+
+Started GET "/testqs/3" for 127.0.0.1 at 2022-09-16 11:00:33 +0700
+Processing by TestqsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTestq Load (0.3ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 828)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3002)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 5841)
+
+
+Started DELETE "/testqs/3" for 127.0.0.1 at 2022-09-16 11:00:34 +0700
+Processing by TestqsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mTestq Load (0.2ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/testqs_controller.rb:57:in `destroy'
+  [1m[36mTestq Destroy (0.3ms)[0m  [1m[31mDELETE FROM "testqs" WHERE "testqs"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/testqs_controller.rb:57:in `destroy'
+  [1m[36mTRANSACTION (11.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/testqs_controller.rb:57:in `destroy'
+Redirected to http://127.0.0.1:3000/testqs
+Completed 302 Found in 18ms (ActiveRecord: 11.8ms | Allocations: 2385)
+
+
+Started GET "/testqs" for 127.0.0.1 at 2022-09-16 11:00:34 +0700
+Processing by TestqsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/index.html.erb within layouts/application
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs"[0m
+  ↳ app/views/testqs/index.html.erb:6
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered testqs/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 975)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3142)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 3451)
+
+
+Started GET "/testqs/1" for 127.0.0.1 at 2022-09-16 11:00:35 +0700
+Processing by TestqsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 613)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2772)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 3472)
+
+
+Started DELETE "/testqs/1" for 127.0.0.1 at 2022-09-16 11:00:36 +0700
+Processing by TestqsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mTestq Load (0.2ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/testqs_controller.rb:57:in `destroy'
+  [1m[36mTestq Destroy (0.3ms)[0m  [1m[31mDELETE FROM "testqs" WHERE "testqs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/testqs_controller.rb:57:in `destroy'
+  [1m[36mTRANSACTION (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/testqs_controller.rb:57:in `destroy'
+Redirected to http://127.0.0.1:3000/testqs
+Completed 302 Found in 17ms (ActiveRecord: 11.3ms | Allocations: 2289)
+
+
+Started GET "/testqs" for 127.0.0.1 at 2022-09-16 11:00:36 +0700
+Processing by TestqsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/index.html.erb within layouts/application
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs"[0m
+  ↳ app/views/testqs/index.html.erb:6
+  Rendered testqs/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 795)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2962)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 3223)
+
+
+Started GET "/testqs/new" for 127.0.0.1 at 2022-09-16 11:00:37 +0700
+Processing by TestqsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/new.html.erb within layouts/application
+  Rendered testqs/_form.html.erb (Duration: 12.0ms | Allocations: 5373)
+  Rendered testqs/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 5652)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 7824)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 8142)
+
+
+Started POST "/testqs" for 127.0.0.1 at 2022-09-16 11:00:45 +0700
+Processing by TestqsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "testq"=>{"countq"=>"10", "nowq"=>"", "commentq"=>"r"}, "commit"=>"Create Testq"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/testqs_controller.rb:27:in `block in create'
+  [1m[36mTestq Create (0.4ms)[0m  [1m[32mINSERT INTO "testqs" ("countq", "nowq", "commentq", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["countq", 10], ["nowq", nil], ["commentq", "r"], ["created_at", "2022-09-16 04:00:45.948665"], ["updated_at", "2022-09-16 04:00:45.948665"]]
+  ↳ app/controllers/testqs_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/testqs_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/testqs/4
+Completed 302 Found in 21ms (ActiveRecord: 7.1ms | Allocations: 4944)
+
+
+Started GET "/testqs/4" for 127.0.0.1 at 2022-09-16 11:00:45 +0700
+Processing by TestqsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mTestq Load (0.2ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 642)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2798)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 3487)
+
+
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.3ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "r, 0"], ["updated_at", "2022-09-16 04:00:47.788772"], ["id", 4]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (10.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "r, 0, 1"], ["updated_at", "2022-09-16 04:00:50.112066"], ["id", 4]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+Started GET "/testqs/4" for 127.0.0.1 at 2022-09-16 11:00:52 +0700
+Processing by TestqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 597)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2753)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 3436)
+
+
+Started GET "/testqs/4" for 127.0.0.1 at 2022-09-16 11:00:52 +0700
+Processing by TestqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 607)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2763)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 3446)
+
+
+Started GET "/testqs/4" for 127.0.0.1 at 2022-09-16 11:00:53 +0700
+Processing by TestqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 605)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2761)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 3444)
+
+
+  [1m[36mTestq Load (0.2ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "r, 0, 1, 2"], ["updated_at", "2022-09-16 04:00:54.381897"], ["id", 4]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+Started GET "/testqs/4" for 127.0.0.1 at 2022-09-16 11:00:54 +0700
+Processing by TestqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 621)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2777)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 3460)
+
+
+Started GET "/testqs/4" for 127.0.0.1 at 2022-09-16 11:00:55 +0700
+Processing by TestqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTestq Load (0.2ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 613)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 2769)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 3452)
+
+
+Started GET "/testqs/4" for 127.0.0.1 at 2022-09-16 11:00:55 +0700
+Processing by TestqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 617)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2773)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 3456)
+
+
+Started GET "/testqs/4" for 127.0.0.1 at 2022-09-16 11:00:56 +0700
+Processing by TestqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTestq Load (0.5ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 611)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2767)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.5ms | Allocations: 3450)
+
+
+Started GET "/testqs/4" for 127.0.0.1 at 2022-09-16 11:00:57 +0700
+Processing by TestqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 619)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2775)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 3458)
+
+
+Started GET "/testqs/4" for 127.0.0.1 at 2022-09-16 11:00:57 +0700
+Processing by TestqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 607)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2763)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 3446)
+
+
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.3ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "r, 0, 1, 2, 3"], ["updated_at", "2022-09-16 04:00:57.711829"], ["id", 4]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+Started GET "/testqs/4" for 127.0.0.1 at 2022-09-16 11:00:58 +0700
+Processing by TestqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 607)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2763)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 3446)
+
+
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "r, 0, 1, 2, 3, 4"], ["updated_at", "2022-09-16 04:01:02.010109"], ["id", 4]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (11.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "r, 0, 1, 2, 3, 4, 5"], ["updated_at", "2022-09-16 04:01:06.297081"], ["id", 4]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "r, 0, 1, 2, 3, 4, 5, 6"], ["updated_at", "2022-09-16 04:01:09.632548"], ["id", 4]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "r, 0, 1, 2, 3, 4, 5, 6, 7"], ["updated_at", "2022-09-16 04:01:12.880118"], ["id", 4]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "r, 0, 1, 2, 3, 4, 5, 6, 7, 8"], ["updated_at", "2022-09-16 04:01:14.201736"], ["id", 4]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (10.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "r, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9"], ["updated_at", "2022-09-16 04:01:15.442449"], ["id", 4]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+Started DELETE "/testqs/4" for 127.0.0.1 at 2022-09-16 11:02:00 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestqsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mTestq Load (0.3ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/testqs_controller.rb:57:in `destroy'
+  [1m[36mTestq Destroy (0.3ms)[0m  [1m[31mDELETE FROM "testqs" WHERE "testqs"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/testqs_controller.rb:57:in `destroy'
+  [1m[36mTRANSACTION (14.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/testqs_controller.rb:57:in `destroy'
+Redirected to http://127.0.0.1:3000/testqs
+Completed 302 Found in 49ms (ActiveRecord: 15.3ms | Allocations: 22365)
+
+
+Started GET "/testqs" for 127.0.0.1 at 2022-09-16 11:02:00 +0700
+Processing by TestqsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/index.html.erb within layouts/application
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs"[0m
+  ↳ app/views/testqs/index.html.erb:6
+  Rendered testqs/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 34569)
+Completed 200 OK in 47ms (Views: 39.6ms | ActiveRecord: 0.1ms | Allocations: 37186)
+
+
+Started GET "/testqs/new" for 127.0.0.1 at 2022-09-16 11:02:02 +0700
+Processing by TestqsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/new.html.erb within layouts/application
+  Rendered testqs/_form.html.erb (Duration: 11.9ms | Allocations: 3761)
+  Rendered testqs/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 4048)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 6223)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 6550)
+
+
+Started POST "/testqs" for 127.0.0.1 at 2022-09-16 11:02:06 +0700
+Processing by TestqsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "testq"=>{"countq"=>"10", "nowq"=>"", "commentq"=>"e"}, "commit"=>"Create Testq"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/testqs_controller.rb:27:in `block in create'
+  [1m[36mTestq Create (0.5ms)[0m  [1m[32mINSERT INTO "testqs" ("countq", "nowq", "commentq", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["countq", 10], ["nowq", nil], ["commentq", "e"], ["created_at", "2022-09-16 04:02:06.821009"], ["updated_at", "2022-09-16 04:02:06.821009"]]
+  ↳ app/controllers/testqs_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/testqs_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/testqs/5
+Completed 302 Found in 20ms (ActiveRecord: 5.5ms | Allocations: 4979)
+
+
+Started GET "/testqs/5" for 127.0.0.1 at 2022-09-16 11:02:06 +0700
+Processing by TestqsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/testqs_controller.rb:68:in `set_testq'
+  Rendering layout layouts/application.html.erb
+  Rendering testqs/show.html.erb within layouts/application
+  Rendered testqs/_testq.html.erb (Duration: 0.5ms | Allocations: 215)
+  Rendered testqs/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1360)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3526)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4293)
+
+
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "e, 0"], ["updated_at", "2022-09-16 04:02:07.244889"], ["id", 5]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.2ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "e, 0, 1"], ["updated_at", "2022-09-16 04:02:11.526920"], ["id", 5]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.2ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "e, 0, 1, 2"], ["updated_at", "2022-09-16 04:02:13.850682"], ["id", 5]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "e, 0, 1, 2, 3"], ["updated_at", "2022-09-16 04:02:17.094341"], ["id", 5]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "e, 0, 1, 2, 3, 4"], ["updated_at", "2022-09-16 04:02:19.331189"], ["id", 5]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.2ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "e, 0, 1, 2, 3, 4, 5"], ["updated_at", "2022-09-16 04:02:20.680998"], ["id", 5]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (11.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "e, 0, 1, 2, 3, 4, 5, 6"], ["updated_at", "2022-09-16 04:02:22.938601"], ["id", 5]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "e, 0, 1, 2, 3, 4, 5, 6, 7"], ["updated_at", "2022-09-16 04:02:24.176371"], ["id", 5]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.1ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "e, 0, 1, 2, 3, 4, 5, 6, 7, 8"], ["updated_at", "2022-09-16 04:02:28.491203"], ["id", 5]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Load (0.2ms)[0m  [1m[34mSELECT "testqs".* FROM "testqs" WHERE "testqs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/jobs/simplejob.rb:6:in `perform'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTestq Update (0.2ms)[0m  [1m[33mUPDATE "testqs" SET "commentq" = ?, "updated_at" = ? WHERE "testqs"."id" = ?[0m  [["commentq", "e, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9"], ["updated_at", "2022-09-16 04:02:32.729129"], ["id", 5]]
+  ↳ app/jobs/simplejob.rb:9:in `perform'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/jobs/simplejob.rb:9:in `perform'

@@ -22,7 +22,7 @@ class TestqsController < ApplicationController
   # POST /testqs or /testqs.json
   def create
     @testq = Testq.new(testq_params)
-    Resque.enqueue(SimpleJob, "Yahoo!")
+    #Resque.enqueue(SimpleJob, "Yahoo!")
     respond_to do |format|
       if @testq.save
         format.html { redirect_to testq_url(@testq), notice: "Testq was successfully created." }
@@ -32,6 +32,11 @@ class TestqsController < ApplicationController
         format.json { render json: @testq.errors, status: :unprocessable_entity }
       end
     end
+
+    testq_params['countq'].to_i.times do |x|
+      Resque.enqueue(SimpleJob, [@testq.id, x] )
+    end
+
   end
 
 

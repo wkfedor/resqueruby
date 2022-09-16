@@ -1,9 +1,13 @@
 class SimpleJob
   @queue = :simple
 
-  def self.perform(str)
+  def self.perform(mass)
     # здесь делаем важные и полезные вещи
-
-      puts "Job is done! #{str}"
+    testq = Testq.find(mass[0])
+    p "---#{testq.inspect}---"
+    testq.commentq="#{testq.commentq}, #{mass[1]}"
+    testq.save
+    sleep(rand(1...5))
+    puts "Job is done! #{mass[0]}   #{mass[1]}"
   end
 end
