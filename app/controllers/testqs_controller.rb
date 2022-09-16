@@ -22,7 +22,6 @@ class TestqsController < ApplicationController
   # POST /testqs or /testqs.json
   def create
     @testq = Testq.new(testq_params)
-    #Resque.enqueue(SimpleJob, "Yahoo!")
     respond_to do |format|
       if @testq.save
         format.html { redirect_to testq_url(@testq), notice: "Testq was successfully created." }
